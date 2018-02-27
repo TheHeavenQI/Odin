@@ -13,7 +13,7 @@ target 'Odin' do
     pod 'SwiftyJSON'
 
 # Rx
-    pod 'RxSwift'
+    pod 'RxSwift’
     pod 'RxCocoa'
     pod 'RxAlamofire'
     pod 'RxDataSources'

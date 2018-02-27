@@ -7,100 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C3C31532044EEEA0083CC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C31522044EEEA0083CC05 /* AppDelegate.swift */; };
-		0C3C31552044EEEA0083CC05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C31542044EEEA0083CC05 /* ViewController.swift */; };
-		0C3C31582044EEEA0083CC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C31562044EEEA0083CC05 /* Main.storyboard */; };
-		0C3C315A2044EEEA0083CC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C31592044EEEA0083CC05 /* Assets.xcassets */; };
-		0C3C315D2044EEEA0083CC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C315B2044EEEA0083CC05 /* LaunchScreen.storyboard */; };
-		E5F66B2ABC5B81BD9CFD82B8 /* Pods_Odin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2C6A9E284AE67FA99D2816 /* Pods_Odin.framework */; };
+		02C5C0BFD01DE72D10A01648 /* Pods_Odin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C6A04A9D0C0081306326B6 /* Pods_Odin.framework */; };
+		B5E162402045402D00883BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1623F2045402D00883BD5 /* AppDelegate.swift */; };
+		B5E162422045402D00883BD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E162412045402D00883BD5 /* ViewController.swift */; };
+		B5E162452045402D00883BD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E162432045402D00883BD5 /* Main.storyboard */; };
+		B5E162472045402D00883BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E162462045402D00883BD5 /* Assets.xcassets */; };
+		B5E1624A2045402D00883BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E162482045402D00883BD5 /* LaunchScreen.storyboard */; };
+		B5E162552045402D00883BD5 /* OdinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E162542045402D00883BD5 /* OdinTests.swift */; };
+		B5E162602045402D00883BD5 /* OdinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E1625F2045402D00883BD5 /* OdinUITests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5E162512045402D00883BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E162342045402D00883BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E1623B2045402D00883BD5;
+			remoteInfo = Odin;
+		};
+		B5E1625C2045402D00883BD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5E162342045402D00883BD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E1623B2045402D00883BD5;
+			remoteInfo = Odin;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0C3C314F2044EEEA0083CC05 /* Odin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C3C31522044EEEA0083CC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C3C31542044EEEA0083CC05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0C3C31572044EEEA0083CC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0C3C31592044EEEA0083CC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0C3C315C2044EEEA0083CC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0C3C315E2044EEEA0083CC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F2C6A9E284AE67FA99D2816 /* Pods_Odin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Odin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4E20895BC83E32EB219BA9 /* Pods-Odin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Odin/Pods-Odin.debug.xcconfig"; sourceTree = "<group>"; };
-		E91D4B4F942CA9EDB656028C /* Pods-Odin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Odin/Pods-Odin.release.xcconfig"; sourceTree = "<group>"; };
+		27C6A04A9D0C0081306326B6 /* Pods_Odin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Odin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		501B74500D50F871F4356F7B /* Pods-Odin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Odin/Pods-Odin.release.xcconfig"; sourceTree = "<group>"; };
+		56609A5C4AE6D6FFBD231028 /* Pods-Odin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Odin/Pods-Odin.debug.xcconfig"; sourceTree = "<group>"; };
+		B5E1623C2045402D00883BD5 /* Odin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E1623F2045402D00883BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5E162412045402D00883BD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5E162442045402D00883BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5E162462045402D00883BD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5E162492045402D00883BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5E1624B2045402D00883BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E162502045402D00883BD5 /* OdinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E162542045402D00883BD5 /* OdinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdinTests.swift; sourceTree = "<group>"; };
+		B5E162562045402D00883BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E1625B2045402D00883BD5 /* OdinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E1625F2045402D00883BD5 /* OdinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdinUITests.swift; sourceTree = "<group>"; };
+		B5E162612045402D00883BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C3C314C2044EEEA0083CC05 /* Frameworks */ = {
+		B5E162392045402D00883BD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F66B2ABC5B81BD9CFD82B8 /* Pods_Odin.framework in Frameworks */,
+				02C5C0BFD01DE72D10A01648 /* Pods_Odin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E1624D2045402D00883BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E162582045402D00883BD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C3C31462044EEEA0083CC05 = {
+		4C646982372D05A1D5DB9714 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C3C31512044EEEA0083CC05 /* Odin */,
-				0C3C31502044EEEA0083CC05 /* Products */,
-				8D567B0A9A8C57EEFAADD5D4 /* Pods */,
-				A9118DE2CC198F152E33C39C /* Frameworks */,
+				27C6A04A9D0C0081306326B6 /* Pods_Odin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5E162332045402D00883BD5 = {
+			isa = PBXGroup;
+			children = (
+				B5E1623E2045402D00883BD5 /* Odin */,
+				B5E162532045402D00883BD5 /* OdinTests */,
+				B5E1625E2045402D00883BD5 /* OdinUITests */,
+				B5E1623D2045402D00883BD5 /* Products */,
+				E7D4367D564A6CAF8B4ABA57 /* Pods */,
+				4C646982372D05A1D5DB9714 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0C3C31502044EEEA0083CC05 /* Products */ = {
+		B5E1623D2045402D00883BD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C3C314F2044EEEA0083CC05 /* Odin.app */,
+				B5E1623C2045402D00883BD5 /* Odin.app */,
+				B5E162502045402D00883BD5 /* OdinTests.xctest */,
+				B5E1625B2045402D00883BD5 /* OdinUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C3C31512044EEEA0083CC05 /* Odin */ = {
+		B5E1623E2045402D00883BD5 /* Odin */ = {
 			isa = PBXGroup;
 			children = (
-				0C3C31522044EEEA0083CC05 /* AppDelegate.swift */,
-				0C3C31542044EEEA0083CC05 /* ViewController.swift */,
-				0C3C31562044EEEA0083CC05 /* Main.storyboard */,
-				0C3C31592044EEEA0083CC05 /* Assets.xcassets */,
-				0C3C315B2044EEEA0083CC05 /* LaunchScreen.storyboard */,
-				0C3C315E2044EEEA0083CC05 /* Info.plist */,
+				B5E1623F2045402D00883BD5 /* AppDelegate.swift */,
+				B5E162412045402D00883BD5 /* ViewController.swift */,
+				B5E162432045402D00883BD5 /* Main.storyboard */,
+				B5E162462045402D00883BD5 /* Assets.xcassets */,
+				B5E162482045402D00883BD5 /* LaunchScreen.storyboard */,
+				B5E1624B2045402D00883BD5 /* Info.plist */,
 			);
 			path = Odin;
 			sourceTree = "<group>";
 		};
-		8D567B0A9A8C57EEFAADD5D4 /* Pods */ = {
+		B5E162532045402D00883BD5 /* OdinTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE4E20895BC83E32EB219BA9 /* Pods-Odin.debug.xcconfig */,
-				E91D4B4F942CA9EDB656028C /* Pods-Odin.release.xcconfig */,
+				B5E162542045402D00883BD5 /* OdinTests.swift */,
+				B5E162562045402D00883BD5 /* Info.plist */,
 			);
-			name = Pods;
+			path = OdinTests;
 			sourceTree = "<group>";
 		};
-		A9118DE2CC198F152E33C39C /* Frameworks */ = {
+		B5E1625E2045402D00883BD5 /* OdinUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9F2C6A9E284AE67FA99D2816 /* Pods_Odin.framework */,
+				B5E1625F2045402D00883BD5 /* OdinUITests.swift */,
+				B5E162612045402D00883BD5 /* Info.plist */,
 			);
-			name = Frameworks;
+			path = OdinUITests;
+			sourceTree = "<group>";
+		};
+		E7D4367D564A6CAF8B4ABA57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56609A5C4AE6D6FFBD231028 /* Pods-Odin.debug.xcconfig */,
+				501B74500D50F871F4356F7B /* Pods-Odin.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C3C314E2044EEEA0083CC05 /* Odin */ = {
+		B5E1623B2045402D00883BD5 /* Odin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C3C31612044EEEA0083CC05 /* Build configuration list for PBXNativeTarget "Odin" */;
+			buildConfigurationList = B5E162642045402D00883BD5 /* Build configuration list for PBXNativeTarget "Odin" */;
 			buildPhases = (
-				64A5E1EAD9DB62FFC830A863 /* [CP] Check Pods Manifest.lock */,
-				0C3C314B2044EEEA0083CC05 /* Sources */,
-				0C3C314C2044EEEA0083CC05 /* Frameworks */,
-				0C3C314D2044EEEA0083CC05 /* Resources */,
-				A55ED5EDB0A13894EE75A089 /* [CP] Embed Pods Frameworks */,
-				4CDC955EA1148CAC4578CC45 /* [CP] Copy Pods Resources */,
+				C8C86409B64A633987110D41 /* [CP] Check Pods Manifest.lock */,
+				B5E162382045402D00883BD5 /* Sources */,
+				B5E162392045402D00883BD5 /* Frameworks */,
+				B5E1623A2045402D00883BD5 /* Resources */,
+				235E2CB6CCD2DA2958483F91 /* [CP] Embed Pods Frameworks */,
+				B14A87EA14AF63379FA331AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -108,26 +169,72 @@
 			);
 			name = Odin;
 			productName = Odin;
-			productReference = 0C3C314F2044EEEA0083CC05 /* Odin.app */;
+			productReference = B5E1623C2045402D00883BD5 /* Odin.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B5E1624F2045402D00883BD5 /* OdinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E162672045402D00883BD5 /* Build configuration list for PBXNativeTarget "OdinTests" */;
+			buildPhases = (
+				B5E1624C2045402D00883BD5 /* Sources */,
+				B5E1624D2045402D00883BD5 /* Frameworks */,
+				B5E1624E2045402D00883BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E162522045402D00883BD5 /* PBXTargetDependency */,
+			);
+			name = OdinTests;
+			productName = OdinTests;
+			productReference = B5E162502045402D00883BD5 /* OdinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5E1625A2045402D00883BD5 /* OdinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E1626A2045402D00883BD5 /* Build configuration list for PBXNativeTarget "OdinUITests" */;
+			buildPhases = (
+				B5E162572045402D00883BD5 /* Sources */,
+				B5E162582045402D00883BD5 /* Frameworks */,
+				B5E162592045402D00883BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E1625D2045402D00883BD5 /* PBXTargetDependency */,
+			);
+			name = OdinUITests;
+			productName = OdinUITests;
+			productReference = B5E1625B2045402D00883BD5 /* OdinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0C3C31472044EEEA0083CC05 /* Project object */ = {
+		B5E162342045402D00883BD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = Sloan;
+				ORGANIZATIONNAME = MagicBeans;
 				TargetAttributes = {
-					0C3C314E2044EEEA0083CC05 = {
+					B5E1623B2045402D00883BD5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					B5E1624F2045402D00883BD5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B5E1623B2045402D00883BD5;
+					};
+					B5E1625A2045402D00883BD5 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B5E1623B2045402D00883BD5;
+					};
 				};
 			};
-			buildConfigurationList = 0C3C314A2044EEEA0083CC05 /* Build configuration list for PBXProject "Odin" */;
+			buildConfigurationList = B5E162372045402D00883BD5 /* Build configuration list for PBXProject "Odin" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,64 +242,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 0C3C31462044EEEA0083CC05;
-			productRefGroup = 0C3C31502044EEEA0083CC05 /* Products */;
+			mainGroup = B5E162332045402D00883BD5;
+			productRefGroup = B5E1623D2045402D00883BD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C3C314E2044EEEA0083CC05 /* Odin */,
+				B5E1623B2045402D00883BD5 /* Odin */,
+				B5E1624F2045402D00883BD5 /* OdinTests */,
+				B5E1625A2045402D00883BD5 /* OdinUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C3C314D2044EEEA0083CC05 /* Resources */ = {
+		B5E1623A2045402D00883BD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3C315D2044EEEA0083CC05 /* LaunchScreen.storyboard in Resources */,
-				0C3C315A2044EEEA0083CC05 /* Assets.xcassets in Resources */,
-				0C3C31582044EEEA0083CC05 /* Main.storyboard in Resources */,
+				B5E1624A2045402D00883BD5 /* LaunchScreen.storyboard in Resources */,
+				B5E162472045402D00883BD5 /* Assets.xcassets in Resources */,
+				B5E162452045402D00883BD5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E1624E2045402D00883BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E162592045402D00883BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CDC955EA1148CAC4578CC45 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Odin/Pods-Odin-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		64A5E1EAD9DB62FFC830A863 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Odin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55ED5EDB0A13894EE75A089 /* [CP] Embed Pods Frameworks */ = {
+		235E2CB6CCD2DA2958483F91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,33 +328,95 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Odin/Pods-Odin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B14A87EA14AF63379FA331AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Odin/Pods-Odin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C86409B64A633987110D41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Odin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C3C314B2044EEEA0083CC05 /* Sources */ = {
+		B5E162382045402D00883BD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3C31552044EEEA0083CC05 /* ViewController.swift in Sources */,
-				0C3C31532044EEEA0083CC05 /* AppDelegate.swift in Sources */,
+				B5E162422045402D00883BD5 /* ViewController.swift in Sources */,
+				B5E162402045402D00883BD5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E1624C2045402D00883BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E162552045402D00883BD5 /* OdinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E162572045402D00883BD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E162602045402D00883BD5 /* OdinUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B5E162522045402D00883BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E1623B2045402D00883BD5 /* Odin */;
+			targetProxy = B5E162512045402D00883BD5 /* PBXContainerItemProxy */;
+		};
+		B5E1625D2045402D00883BD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E1623B2045402D00883BD5 /* Odin */;
+			targetProxy = B5E1625C2045402D00883BD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		0C3C31562044EEEA0083CC05 /* Main.storyboard */ = {
+		B5E162432045402D00883BD5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0C3C31572044EEEA0083CC05 /* Base */,
+				B5E162442045402D00883BD5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0C3C315B2044EEEA0083CC05 /* LaunchScreen.storyboard */ = {
+		B5E162482045402D00883BD5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0C3C315C2044EEEA0083CC05 /* Base */,
+				B5E162492045402D00883BD5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -272,7 +424,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0C3C315F2044EEEA0083CC05 /* Debug */ = {
+		B5E162622045402D00883BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,7 +481,7 @@
 			};
 			name = Debug;
 		};
-		0C3C31602044EEEA0083CC05 /* Release */ = {
+		B5E162632045402D00883BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -379,60 +531,138 @@
 			};
 			name = Release;
 		};
-		0C3C31622044EEEA0083CC05 /* Debug */ = {
+		B5E162652045402D00883BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE4E20895BC83E32EB219BA9 /* Pods-Odin.debug.xcconfig */;
+			baseConfigurationReference = 56609A5C4AE6D6FFBD231028 /* Pods-Odin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZMNJ5WHY3L;
 				INFOPLIST_FILE = Odin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Magic-Beans.Odin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.Odin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0C3C31632044EEEA0083CC05 /* Release */ = {
+		B5E162662045402D00883BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E91D4B4F942CA9EDB656028C /* Pods-Odin.release.xcconfig */;
+			baseConfigurationReference = 501B74500D50F871F4356F7B /* Pods-Odin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZMNJ5WHY3L;
 				INFOPLIST_FILE = Odin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Magic-Beans.Odin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.Odin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
+		B5E162682045402D00883BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OdinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.OdinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Odin.app/Odin";
+			};
+			name = Debug;
+		};
+		B5E162692045402D00883BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OdinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.OdinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Odin.app/Odin";
+			};
+			name = Release;
+		};
+		B5E1626B2045402D00883BD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OdinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.OdinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Odin;
+			};
+			name = Debug;
+		};
+		B5E1626C2045402D00883BD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OdinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MagicBeans.OdinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Odin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C3C314A2044EEEA0083CC05 /* Build configuration list for PBXProject "Odin" */ = {
+		B5E162372045402D00883BD5 /* Build configuration list for PBXProject "Odin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C3C315F2044EEEA0083CC05 /* Debug */,
-				0C3C31602044EEEA0083CC05 /* Release */,
+				B5E162622045402D00883BD5 /* Debug */,
+				B5E162632045402D00883BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C3C31612044EEEA0083CC05 /* Build configuration list for PBXNativeTarget "Odin" */ = {
+		B5E162642045402D00883BD5 /* Build configuration list for PBXNativeTarget "Odin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C3C31622044EEEA0083CC05 /* Debug */,
-				0C3C31632044EEEA0083CC05 /* Release */,
+				B5E162652045402D00883BD5 /* Debug */,
+				B5E162662045402D00883BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E162672045402D00883BD5 /* Build configuration list for PBXNativeTarget "OdinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E162682045402D00883BD5 /* Debug */,
+				B5E162692045402D00883BD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E1626A2045402D00883BD5 /* Build configuration list for PBXNativeTarget "OdinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E1626B2045402D00883BD5 /* Debug */,
+				B5E1626C2045402D00883BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0C3C31472044EEEA0083CC05 /* Project object */;
+	rootObject = B5E162342045402D00883BD5 /* Project object */;
 }

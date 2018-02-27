@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Odin
 //
-//  Created by MagicBeans2 on 2018/2/27.
-//  Copyright © 2018年 Sloan. All rights reserved.
+//  Created by yintr on 2018/2/27.
+//  Copyright © 2018年 MagicBeans. All rights reserved.
 //
 
 import UIKit

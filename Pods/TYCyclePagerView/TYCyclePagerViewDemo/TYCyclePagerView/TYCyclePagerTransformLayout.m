@@ -36,6 +36,20 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
 
 @implementation TYCyclePagerTransformLayout
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    return self;
+}
+
 #pragma mark - getter setter
 
 - (void)setDelegate:(id<TYCyclePagerTransformLayoutDelegate>)delegate {
@@ -86,19 +100,14 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
 
 #pragma mark - layout
 
-- (void)prepareLayout {
-    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    [super prepareLayout];
-}
-
 -(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
     return _layout.layoutType == TYCyclePagerTransformLayoutNormal ? [super shouldInvalidateLayoutForBoundsChange:newBounds] : YES;
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSArray *attributesArray = [super layoutAttributesForElementsInRect:rect];
     if (_delegateFlags.applyTransformToAttributes || _layout.layoutType != TYCyclePagerTransformLayoutNormal) {
+        NSArray *attributesArray = [[NSArray alloc] initWithArray:[super layoutAttributesForElementsInRect:rect] copyItems:YES];
         CGRect visibleRect = {self.collectionView.contentOffset,self.collectionView.bounds.size};
         for (UICollectionViewLayoutAttributes *attributes in attributesArray) {
             if (!CGRectIntersectsRect(visibleRect, attributes.frame)) {
@@ -110,8 +119,9 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
                 [self applyTransformToAttributes:attributes layoutType:_layout.layoutType];
             }
         }
+        return attributesArray;
     }
-    return attributesArray;
+    return [super layoutAttributesForElementsInRect:rect];
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -164,7 +174,7 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
     CGFloat centetX = self.collectionView.contentOffset.x + collectionViewWidth/2;
     CGFloat delta = ABS(attributes.center.x - centetX);
     CGFloat scale = MAX(1 - delta/collectionViewWidth*_layout.rateOfChange, _layout.minimumScale);
-    CGFloat alpha = MAX(1 - delta/collectionViewWidth*_layout.rateOfChange, _layout.minimumAlpha);
+    CGFloat alpha = MAX(1 - delta/collectionViewWidth, _layout.minimumAlpha);
     [self applyLinearTransformToAttributes:attributes scale:scale alpha:alpha];
 }
 
@@ -202,7 +212,7 @@ typedef NS_ENUM(NSUInteger, TYTransformLayoutItemDirection) {
     CGFloat centetX = self.collectionView.contentOffset.x + collectionViewWidth/2;
     CGFloat delta = ABS(attributes.center.x - centetX);
     CGFloat angle = MIN(delta/collectionViewWidth*(1-_layout.rateOfChange), _layout.maximumAngle);
-    CGFloat alpha = MAX(1 - delta/collectionViewWidth*_layout.rateOfChange, _layout.minimumAlpha);
+    CGFloat alpha = MAX(1 - delta/collectionViewWidth, _layout.minimumAlpha);
     [self applyCoverflowTransformToAttributes:attributes angle:angle alpha:alpha];
 }
 

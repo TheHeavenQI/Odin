@@ -50,6 +50,8 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 @property (nonatomic, assign) TYIndexSection beginDragIndexSection;
 
 @property (nonatomic, assign) BOOL needClearLayout;
+@property (nonatomic, assign) BOOL didReloadData;
+@property (nonatomic, assign) BOOL didLayout;
 
 @end
 
@@ -79,6 +81,8 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 }
 
 - (void)configureProperty {
+    _didReloadData = NO;
+    _didLayout = NO;
     _autoScrollInterval = 0;
     _isInfiniteLoop = YES;
     _beginDragIndexSection.index = 0;
@@ -213,7 +217,7 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 
 - (void)setDelegate:(id<TYCyclePagerViewDelegate>)delegate {
     _delegate = delegate;
-    _delegateFlags.pagerViewDidScroll = [delegate respondsToSelector:@selector(scrollViewDidScroll:)];
+    _delegateFlags.pagerViewDidScroll = [delegate respondsToSelector:@selector(pagerViewDidScroll:)];
     _delegateFlags.didScrollFromIndexToNewIndex = [delegate respondsToSelector:@selector(pagerView:didScrollFromIndex:toIndex:)];
     _delegateFlags.initializeTransformAttributes = [delegate respondsToSelector:@selector(pagerView:initializeTransformAttributes:)];
     _delegateFlags.applyTransformToAttributes = [delegate respondsToSelector:@selector(pagerView:applyTransformToAttributes:)];
@@ -231,6 +235,7 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 #pragma mark - public
 
 - (void)reloadData {
+    _didReloadData = YES;
     [self setNeedClearLayout];
     [self clearLayout];
     [self updateData];
@@ -241,7 +246,10 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
     [self updateLayout];
     _numberOfItems = [_dataSource numberOfItemsInPagerView:self];
     [_collectionView reloadData];
-    [self resetPagerViewAtIndex:_indexSection.index];
+    if (!_didLayout && !CGRectIsEmpty(self.frame) && _indexSection.index < 0) {
+        _didLayout = YES;
+    }
+    [self resetPagerViewAtIndex:_indexSection.index < 0 && !CGRectIsEmpty(self.frame) ? 0 :_indexSection.index];
 }
 
 - (void)scrollToNearlyIndexAtDirection:(TYPagerScrollDirection)direction animate:(BOOL)animate {
@@ -417,7 +425,6 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
     }
     if (_indexSection.section > kPagerViewMaxSectionCount - kPagerViewMinSectionCount || _indexSection.section < kPagerViewMinSectionCount) {
         [self resetPagerViewAtIndex:_indexSection.index];
-        //NSLog(@"recyclePagerViewIfNeed");
     }
 }
 
@@ -465,6 +472,9 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!_didLayout) {
+        return;
+    }
     TYIndexSection newIndexSection =  [self caculateIndexSectionWithOffsetX:scrollView.contentOffset.x];
     if (_numberOfItems <= 0 || ![self isValidIndexSection:newIndexSection]) {
         NSLog(@"inVlaidIndexSection:(%ld,%ld)!",(long)newIndexSection.index,(long)newIndexSection.section);
@@ -494,7 +504,6 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    //NSLog(@"scrollViewWillEndDragging %lf %lf",scrollView.contentOffset.x,targetContentOffset->x);
     if (fabs(velocity.x) < 0.35 || !TYEqualIndexSection(_beginDragIndexSection, _indexSection)) {
         targetContentOffset->x = [self caculateOffsetXAtIndexSection:_indexSection];
         return;
@@ -554,7 +563,8 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
     [super layoutSubviews];
     BOOL needUpdateLayout = !CGRectEqualToRect(_collectionView.frame, self.bounds);
     _collectionView.frame = self.bounds;
-    if (_indexSection.section < 0 || needUpdateLayout) {
+    if ((_indexSection.section < 0 || needUpdateLayout) && (_numberOfItems > 0 || _didReloadData)) {
+        _didLayout = YES;
         [self setNeedUpdateLayout];
     }
 }

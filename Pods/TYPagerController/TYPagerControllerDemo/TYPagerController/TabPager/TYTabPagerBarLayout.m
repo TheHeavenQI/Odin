@@ -43,6 +43,7 @@
     _normalTextColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1];
     _selectedTextColor = [UIColor redColor];
     _textColorProgressEnable = YES;
+    //_adjustContentCellsCenter = YES;
 }
 
 #pragma mark - geter setter
@@ -83,8 +84,19 @@
     if (!UIEdgeInsetsEqualToEdgeInsets(_sectionInset, UIEdgeInsetsZero) || _barStyle != TYPagerBarStyleCoverView) {
         return _sectionInset;
     }
+    if (_barStyle == TYPagerBarStyleCoverView && _adjustContentCellsCenter) {
+        return _sectionInset;
+    }
     CGFloat horEdging = -_progressHorEdging+_cellSpacing;
     return UIEdgeInsetsMake(0, horEdging, 0, horEdging);
+}
+
+- (void)setAdjustContentCellsCenter:(BOOL)adjustContentCellsCenter {
+    BOOL change = _adjustContentCellsCenter != adjustContentCellsCenter;
+    _adjustContentCellsCenter = adjustContentCellsCenter;
+    if (change && _pagerTabBar.superview) {
+        [_pagerTabBar setNeedsLayout];
+    }
 }
 
 - (void)setBarStyle:(TYPagerBarStyle)barStyle
@@ -142,8 +154,40 @@
     UICollectionViewFlowLayout *collectionLayout = (UICollectionViewFlowLayout *)_pagerTabBar.collectionView.collectionViewLayout;
     collectionLayout.minimumLineSpacing = _cellSpacing;
     collectionLayout.minimumInteritemSpacing = _cellSpacing;
-    collectionLayout.sectionInset = _sectionInset;
     _selectFontScale = self.normalTextFont.pointSize/(self.selectedTextFont ? self.selectedTextFont.pointSize:self.normalTextFont.pointSize);
+    collectionLayout.sectionInset = _sectionInset;
+}
+
+- (void)invalidateLayout {
+    [_pagerTabBar.collectionView.collectionViewLayout invalidateLayout];
+}
+
+- (void)adjustContentCellsCenterInBar {
+    if (!_adjustContentCellsCenter || !_pagerTabBar.superview) {
+        return;
+    }
+    CGRect frame = self.pagerTabBar.collectionView.frame;
+    if (CGRectIsEmpty(frame)) {
+        return;
+    }
+    
+    UICollectionViewFlowLayout *collectionLayout = (UICollectionViewFlowLayout *)_pagerTabBar.collectionView.collectionViewLayout;
+    CGSize contentSize = collectionLayout.collectionViewContentSize;
+    NSArray *layoutAttribulte = [collectionLayout layoutAttributesForElementsInRect:CGRectMake(0, 0, MAX(contentSize.width, CGRectGetWidth(frame)), MAX(contentSize.height,CGRectGetHeight(frame)))];
+    if (layoutAttribulte.count == 0) {
+        return;
+    }
+    
+    UICollectionViewLayoutAttributes *firstAttribute = layoutAttribulte.firstObject;
+    UICollectionViewLayoutAttributes *lastAttribute = layoutAttribulte.lastObject;
+    CGFloat left = CGRectGetMinX(firstAttribute.frame);
+    CGFloat right = CGRectGetMaxX(lastAttribute.frame);
+    if (right - left > CGRectGetWidth(self.pagerTabBar.frame)) {
+        return;
+    }
+    CGFloat sapce = (CGRectGetWidth(self.pagerTabBar.frame) - (right - left))/2;
+    _sectionInset = UIEdgeInsetsMake(_sectionInset.top, sapce, _sectionInset.bottom, sapce);
+    collectionLayout.sectionInset = _sectionInset;
 }
 
 - (CGRect)cellFrameWithIndex:(NSInteger)index {
@@ -169,7 +213,7 @@
         }
     };
     if (animate) {
-        [UIView animateWithDuration:self.animateDuration animations:^{
+        [UIView animateWithDuration:_animateDuration animations:^{
             animateBlock();
         }];
     }else{
