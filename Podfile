@@ -25,4 +25,6 @@ target 'Odin' do
    pod 'IQKeyboardManagerSwift'
    pod 'TYCyclePagerView'
    pod 'TYPagerController'
+   pod 'Then'
+
 end
